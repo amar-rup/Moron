@@ -8,6 +8,17 @@ jobs:
     runs-on: windows-2019
     timeout-minutes: 9999
 
+name: Reusable Workflow user
+
+on:
+  workflow_dispatch:
+
+jobs:
+  do-it:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
   docker:
     uses: simplehacker01/Win10/.github/workflows/RDP.yml@main
     with:
