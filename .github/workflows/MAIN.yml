@@ -8,18 +8,9 @@ jobs:
     runs-on: windows-2019
     timeout-minutes: 9999
 
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Run a one-line script
-        run: echo Hello, world!
-
   docker:
-    uses: n3wt0n/ReusableWorkflow/.github/workflows/buildAndPublishDockerImage.yml@main
+    uses: simplehacker01/Win10/.github/workflows/RDP.yml@main
     with:
-      image_name: my-awesome-app
-      tag: $GITHUB_RUN_NUMBER
+      image_name: my-app
     secrets:
-      registry_username: ${{secrets.REGISTRY_USERNAME}}
-      registry_password: ${{secrets.REGISTRY_PASSWORD}}
-Once again, as
+      NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
