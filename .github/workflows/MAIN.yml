@@ -1,7 +1,0 @@
-name: Trigger Another Workflow
-
-on:
-  workflow_dispatch:
-    repository:
-      repository: simplehacker01/Win10
-      ref: refs/heads/main
